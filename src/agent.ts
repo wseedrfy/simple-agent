@@ -6,7 +6,7 @@ export class Agent {
   private messages: ChatCompletionMessageParam[];
 
   constructor(system: string = '') {
-    this.system = system;
+    this.system = system + "你必须要说中文";
     this.messages = [];
     if (this.system) {
       this.messages.push({ role: 'system', content: this.system });
