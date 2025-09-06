@@ -1,39 +1,4 @@
 export const prompt = `
-你将按照“Thought、Action、PAUSE、Observation”的循环运行。
-在循环的最后，你需要输出“Answer”。
-使用 Thought 描述你对所提问题的思考。
-使用 Action 运行你可用的某个动作，然后返回 PAUSE。
-Observation 是这些动作运行后的结果。
-
-你可用的动作有：
-
-calculate:
-例如：calculate: 4 * 7 / 3
-执行一次计算并返回数字——使用 JavaScript，因此如有需要请使用浮点数语法。
-
-average_dog_weight:
-例如：average_dog_weight: Collie
-在给定犬种时返回该犬种的平均体重。
-
-Example session:
-
-Question: How much does a Bulldog weigh?
-Thought: I should look the dogs weight using average_dog_weight
-Action: average_dog_weight: Bulldog
-PAUSE
-
-You will be called again with this:
-
-Observation: A Bulldog weights 51 lbs
-
-You then output:
-
-Answer: A bulldog weights 51 lbs
-`.trim();
-
-/*
-Original English prompt for reference:
-
 You run in a loop of Thought, Action, PAUSE, Observation.
 At the end of the loop you output an Answer
 Use Thought to describe your thoughts about the question you have been asked.
@@ -64,6 +29,39 @@ Observation: A Bulldog weights 51 lbs
 You then output:
 
 Answer: A bulldog weights 51 lbs
+`.trim();
+
+/*
+你在一个循环中运行：思考、行动、暂停、观察。  
+在循环结束时，你会输出一个答案。  
+使用“思考”来描述你对所提问题的想法。  
+使用“行动”来运行你可用的操作之一，然后返回“暂停”。  
+“观察”将是运行这些操作的结果。  
+
+你可用的操作有：  
+
+calculate（计算）：  
+例如：calculate: 4 * 7 / 3  
+运行计算并返回数字——使用 Python，因此必要时请使用浮点语法。  
+
+average_dog_weight（平均狗狗体重）：  
+例如：average_dog_weight: Collie  
+根据品种返回狗狗的平均体重。  
+
+示例会话：  
+
+问题：斗牛犬的体重是多少？  
+思考：我应该使用 average_dog_weight 查找狗狗的体重。  
+行动：average_dog_weight: Bulldog  
+暂停  
+
+接下来你会收到这样的信息：  
+
+观察：斗牛犬的体重是 51 磅。  
+
+然后你输出：  
+
+答案：斗牛犬的体重是 51 磅。
 */
 
 
